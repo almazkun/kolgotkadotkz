@@ -15,7 +15,7 @@ class HomepageTests(TestCase):
             password='secret'
         )
 
-        self.post = Post.object.create(
+        self.post = Post.objects.create(
             title='A good title',
             body='Nice body content',
             author=self.user,
@@ -36,7 +36,7 @@ class HomepageTests(TestCase):
     def test_post_list_view(self):
         response = self.client.get(reverse('home'))
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, 'Nice nody content')
+        self.assertContains(response, 'Nice body content')
         self.assertTemplateUsed(response, 'home.html')
     
 
@@ -47,4 +47,3 @@ class HomepageTests(TestCase):
         self.assertEqual(no_response.status_code, 404)
         self.assertContains(response, 'A good title')
         self.assertTemplateUsed(response, 'post_detail.html')
-        
