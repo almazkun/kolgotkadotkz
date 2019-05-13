@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
     <head>
@@ -13,7 +14,7 @@
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
         <link href="https://fonts.googleapis.com/css?family=Marck+Script&amp;subset=cyrillic" rel="stylesheet">
 
@@ -38,35 +39,52 @@
     </head>
     <body>
         <!-- -->
-        <nav class="bg-dotted-red sticky-top">
+        <nav class="bg-dotted-red sticky-top nav-justified text-nowrap">
             <div class="container navbar navbar-expand-lg navbar-light">
                 <div class="san nav-item">
                     <a class="nav-link" href="{% url 'home' %}"><img src="/static/images/logo.png" alt="Kolgotka.kz" class="logo"></a>
                 </div>
-
-
                 <div class="nav-item">
                     <a class="nav-link" href="tel:+77079641114"><i class="fas fa-phone-square"></i> +7 707 964 1114</a>
                 </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="https://wa.me/77079641114?text=I'm%20interested%20in%20your%20car%20for%20sale"><i class="fab fa-whatsapp-square"></i> Whatsapp</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="#">О магазине</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="#">Доставка</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="#">Контакты</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
+                </div>
+
             </div>
         </nav>
         <!-- -->
 
-        <!-- -->
+        
         <main class="">
-
-            <section id="carousel">
+<!-- 
+            <section id="carousel py-1">
                 <div class="container">
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img class="d-block w-100" src="..." alt="First slide">
+                            <div class="carousel-item active">                                
+                                <img class="d-block w-100" src="/static/images/first_img.svg" alt="First slide">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="..." alt="Second slide">
+                                <img class="d-block w-100" src="/static/images/second_img.svg" alt="Second slide">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="..." alt="Third slide">
+                                <img class="d-block w-100" src="/static/images/third_img.svg" alt="Third slide">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -80,13 +98,115 @@
                     </div>
                 </div>
             </section>
-
+-->
             <section id="intro" class="bg-dotted-red py-1">
                 <div class="container jumbotron text-center">
                     <h1 class="display-4 san">Kolgotka.kz</h1>
                     <p>Интернет магазин колготок</p>
                 </div>
-                <div class="container" >
+            </section>
+            
+
+            <section class="py-3">
+              <div class="container">
+                <div class="row">  
+                  <div class="col-md-4">
+                      <nav class="nav flex-column">
+                          <a class="nav-link" href="#!">Классические</a>
+                          <a class="nav-link" href="#!">Колготки с рисунком</a>
+                          <a class="nav-link" href="#!">Чулки</a>
+                          <a class="nav-link" href="#!">Чулки с рисунком</a>
+                          <a class="nav-link" href="#!">Теплые колгитки</a>
+                          <a class="nav-link" href="#!">Большие размеры</a>
+                          <a class="nav-link" href="#!">Гольфы и носки</a>
+                          <a class="nav-link" href="#!">Бельё</a>
+                      </nav>
+                  </div>
+
+                  <div class="col-md-8">
+                    <div class="row">
+
+                        <div class="col-md-3">
+                            <div>
+                              <div class="card mb-3 text-center text-whsm bg-black">
+                                <div class="card-body">
+                                  <div>
+                                    <h1 class="display-4"><i class="fas fa-socks"></i></h1>
+                                  </div>
+                                  LEVANTE
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div>
+                              <div class="card mb-3 text-center text-whsm bg-black">
+                                <div class="card-body">
+                                  <div>
+                                    <h1 class="display-4"><i class="fas fa-socks"></i></h1>
+                                  </div>
+                                  FILOPORO
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div>
+                              <div class="card mb-3 text-center text-whsm bg-black">
+                                <div class="card-body">
+                                  <div>
+                                    <h1 class="display-4"><i class="fas fa-socks"></i></h1>
+                                  </div>
+                                  GLAMOUR
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div>
+                              <div class="card mb-3 text-center text-whsm bg-black">
+                                <div class="card-body">
+                                  <div>
+                                    <h1 class="display-4"><i class="fas fa-socks"></i></h1>
+                                  </div>
+                                  OMSA
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div>
+                              <div class="card mb-3 text-center text-whsm bg-black">
+                                <div class="card-body">
+                                  <div>
+                                    <h1 class="display-4"><i class="fas fa-socks"></i></h1>
+                                  </div>
+                                  (Brand)
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div>
+                              <div class="card mb-3 text-center text-whsm bg-black">
+                                <div class="card-body">
+                                  <div>
+                                    <h1 class="display-4"><i class="fas fa-socks"></i></h1>
+                                  </div>
+                                  (Brand)
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+
+                  </div>
+                </div>
+              </div>
+            </section>
+              
+
+            <section>
+                <div class="container py-1 my-3" >
                     {% block content %}
                     {% endblock %}
                 </div>
@@ -97,61 +217,89 @@
                     <h2 class="display-5">Купить Колготки</h2>
                     <p>Мы продаем Колготки из Италии, оптом и в розницу. Доставка по городу.</p>
                     <div class="row">
-
-                        <div class="col-md-3">
-                          <div>
-                            <div class="card mb-3 text-center text-whsm bg-black">
-                              <div class="card-body">
-                                <div>
-                                  <h1 class="display-4"><i class="fas fa-dolly"></i></h1>
-                                </div>
-                                Оптом
+                      <div class="col-md-3">
+                        <div>
+                          <div class="card mb-3 text-center text-whsm bg-black">
+                            <div class="card-body">
+                              <div>
+                                <h1 class="display-4"><i class="fas fa-dolly"></i></h1>
                               </div>
+                              Оптом
                             </div>
-                          </div>
-                        </div>
-
-                        <div class="col-md-3">
-                          <div>
-                            <div class="card mb-3 text-center text-whsm bg-black">
-                              <div class="card-body">
-                                <div>
-                                  <h1 class="display-4"><i class="fas fa-clone"></i></h1>
-                                </div>
-                                В розницу
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="col-md-3">
-                          <div>
-                            <div class="card mb-3 text-center text-whsm bg-black">
-                              <div class="card-body">
-                                <div>
-                                  <h1 class="display-4"><i class="fas fa-shipping-fast"></i></h1>
-                                </div>
-                                Доставка
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="col-md-3">
-                      <div>
-                        <div class="card mb-3 text-center text-whsm bg-black">
-                          <div class="card-body">
-                            <div>
-                              <h1 class="display-4"><i class="fas fa-italic"></i></h1>
-                            </div>
-                            Пр-во Италия
                           </div>
                         </div>
                       </div>
-                    </div>
 
-                    </div>
-                    <hr/>
+                      <div class="col-md-3">
+                        <div>
+                          <div class="card mb-3 text-center text-whsm bg-black">
+                            <div class="card-body">
+                              <div>
+                                <h1 class="display-4"><i class="fas fa-clone"></i></h1>
+                              </div>
+                              В розницу
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-3">
+                        <div>
+                          <div class="card mb-3 text-center text-whsm bg-black">
+                            <div class="card-body">
+                              <div>
+                                <h1 class="display-4"><i class="fas fa-shipping-fast"></i></h1>
+                              </div>
+                              Доставка
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-3">
+                        <div>
+                          <div class="card mb-3 text-center text-whsm bg-black">
+                            <div class="card-body">
+                              <div>
+                                <h1 class="display-4"><i class="fas fa-italic"></i></h1>
+                              </div>
+                              Пр-во Италия
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            </section>
+
+            <section id="contacts" class="bg-dotted-red py-4">
+                <div class="container">
+                    <div class="card-deck text-center">
+                        <div class="card ">
+                          <div class="card-body">
+                            <h4 class="card-title"><i class="fab fa-instagram"></i></h4>
+                            <p class="card-text">Мы в Instagram</p>
+                          </div>
+                        </div>
+                        <div class="card ">
+                          <div class="card-body">
+                            <h4 class="card-title"><i class="fas fa-map-marked-alt"></i></h4>
+                            <p class="card-text">Мы на рынке Юпитер</p>
+                          </div>
+                        </div>
+                        <div class="card ">
+                          <div class="card-body">
+                            <h4 class="card-title"><i class="fas fa-mountain"></i></h4>
+                            <p class="card-text">Мы в городе Алматы - Магазин "Военторг" - Абая, уг. ул. Гагарина</p>
+                          </div>
+                        </div>
+                        <div class="card ">
+                            <div class="card-body">
+                              <h4 class="card-title font-weight-bold">FREE</h4>
+                              <p class="card-text">БЕСПЛАТНАЯ доставка</p>
+                            </div>
+                          </div>
+                      </div>                      
                 </div>
             </section>
         </main>
