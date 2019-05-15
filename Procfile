@@ -1,0 +1,1 @@
+web: gunicorn kolgotkakz_project.wsgi --log-file -
