@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="abstract" content="Колготки Levante, в лучших традициях Итальянского стиля и качества. Купить в интернет – магазине Kolgotka.kz. Доставка. Возврат. Гарантия. Алматы, Казахстан." />
         <meta name="description" content="Интернет – магазин Итальянских коглоток в Казахстане, Алматы. Капроновые, классические колготки для женщин, большой выбор цветов и размеров. Доставка на дом, в офис и точки самовывоза. Возврат. Гарантия качества. Продажи оптом и в розницу. Колготки Levante. " />
-        <meta name="keywords" content="Капроновые колготки, классические колготки, женские колготки, иатльянские колготки, купить алматы колготки, купить колготки казахстан, купить levante, купить леванте колгитки, официально, дешево, со скидкой, доставка на дом, доставка в офис, срочно купить, оптом" />
+        <meta name="keywords" content="Капроновые колготки, классические колготки, женские колготки, иатльянские колготки, купить алматы колготки, купить колготки казахстан, купить levante, купить леванте коглотки, официально, дешево, со скидкой, доставка на дом, доставка в офис, срочно купить, оптом" />
         <meta name="robots" content="all" />
 
         <title>Колготки из Италии | Интернет магазин | Kolgotka.kz</title>
@@ -67,13 +67,20 @@
                     <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
                 </div>
 
-                <div class="nav-item">
                 {% if user.is_authenticated %}
+                <div class="nav-item">
                   <a class="nav-link" href="#"><i class="fas fa-user"></i> {{ user.username }}</a>
-                {% else %}
-                  <a class="nav-link" href="{% url 'login' %}">ВХОД</a>
-                {% endif %}
                 </div>
+                <div class="nav-item">
+                  <a class="nav-link" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i></a>
+                </div>
+                  
+                {% else %} 
+                <div class="nav-item">
+                  <a class="nav-link" href="{% url 'login' %}">ВХОД</a>
+                </div>
+                {% endif %}
+                
 
                 <div class="nav-item">
                     <a class="nav-link" href="{% url 'post_new' %}">+ Post</a>
@@ -128,7 +135,7 @@
                           <a class="nav-link" href="#!">Колготки с рисунком</a>
                           <a class="nav-link" href="#!">Чулки</a>
                           <a class="nav-link" href="#!">Чулки с рисунком</a>
-                          <a class="nav-link" href="#!">Теплые колгитки</a>
+                          <a class="nav-link" href="#!">Теплые коглотки</a>
                           <a class="nav-link" href="#!">Большие размеры</a>
                           <a class="nav-link" href="#!">Гольфы и носки</a>
                           <a class="nav-link" href="#!">Бельё</a>
