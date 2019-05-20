@@ -1,5 +1,129 @@
 {% extends 'base.html' %}
 
+{% block intro %}
+    <section id="intro" class="bg-dotted-red">
+        <div class="container jumbotron text-center my-0">
+            <h1 class="display-4 san-big">Kolgotka.kz</h1>
+            <p>Интернет магазин колготок</p>
+        </div>
+    </section>
+{% endblock intro %}
+
+{% block top-level-category %}
+    <section id="top-level-category" class="bg-dotted-red">
+        <nav class="container">
+          <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link" href="#!">Классические</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#!">Колготки с рисунком</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#!">Чулки</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#!">Чулки с рисунком</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#!">Теплые коглотки</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#!">Большие размеры</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#!">Гольфы и носки</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#!">Бельё</a>
+              </li>
+          </ul>
+        </nav>
+    </section>
+{% endblock top-level-category %}
+
+{% block brands %}
+    <section id="brands" >
+        <div class="container">
+            <div class="my-3">
+                <h2>Наши любимые бренды</h2>
+            </div>
+            
+            <div class="card-columns">
+                <div class="card brand-card">
+                    <a href="#">
+                        <img class="card-img " src="/static/images/brand_levante.jpg" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h2 class="brand-card-text">LEVANTE</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="card brand-card">
+                        <a href="#">
+                            <img class="card-img " src="/static/images/brand_filodoro.jpg" alt="Card image">
+                            <div class="card-img-overlay">
+                                <h2 class="brand-card-text">FILODORO</h2>
+                            </div>
+                        </a>
+                    </div>
+            </div>
+            <div class="row">  
+                <div class="col">
+                    <div class="row">
+                        
+                        <div class="col-md-3">
+                            <div>
+                            <div class="card mb-3 text-center text-whsm bg-black">
+                                <div class="card-body">
+                                <div>
+                                    <h1 class="display-4"><i class="fas fa-socks"></i></h1>
+                                </div>
+                                GLAMOUR
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div>
+                            <div class="card mb-3 text-center text-whsm bg-black">
+                                <div class="card-body">
+                                <div>
+                                    <h1 class="display-4"><i class="fas fa-socks"></i></h1>
+                                </div>
+                                OMSA
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div>
+                            <div class="card mb-3 text-center text-whsm bg-black">
+                                <div class="card-body">
+                                <div>
+                                    <h1 class="display-4"><i class="fas fa-socks"></i></h1>
+                                </div>
+                                (Brand)
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div>
+                            <div class="card mb-3 text-center text-whsm bg-black">
+                                <div class="card-body">
+                                <div>
+                                    <h1 class="display-4"><i class="fas fa-socks"></i></h1>
+                                </div>
+                                (Brand)
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+{% endblock brands %}
 
 {% block content %}
     {% for post in object_list %}

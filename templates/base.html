@@ -121,108 +121,17 @@
                 </div>
             </section>
           -->
-            <section id="intro" class="bg-dotted-red py-1">
-                <div class="container jumbotron text-center">
-                    <h1 class="display-4 san">Kolgotka.kz</h1>
-                    <p>Интернет магазин колготок</p>
-                </div>
-            </section>
+            {% block intro %}
+              
+            {% endblock intro %}
             
+            {% block top-level-category %}
+              
+            {% endblock top-level-category %}
 
-            <section class="py-3">
-              <div class="container">
-                <div class="row">  
-                  <div class="col-md-4">
-                      <nav class="nav flex-column">
-                          <a class="nav-link" href="#!">Классические</a>
-                          <a class="nav-link" href="#!">Колготки с рисунком</a>
-                          <a class="nav-link" href="#!">Чулки</a>
-                          <a class="nav-link" href="#!">Чулки с рисунком</a>
-                          <a class="nav-link" href="#!">Теплые коглотки</a>
-                          <a class="nav-link" href="#!">Большие размеры</a>
-                          <a class="nav-link" href="#!">Гольфы и носки</a>
-                          <a class="nav-link" href="#!">Бельё</a>
-                      </nav>
-                  </div>
-
-                  <div class="col-md-8">
-                    <div class="row">
-                      <div class="col-md-3">
-                          <div>
-                            <div class="card mb-3 text-center text-whsm bg-black">
-                              <div class="card-body">
-                                <div>
-                                  <h1 class="display-4"><i class="fas fa-socks"></i></h1>
-                                </div>
-                                LEVANTE
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-                      <div class="col-md-3">
-                          <div>
-                            <div class="card mb-3 text-center text-whsm bg-black">
-                              <div class="card-body">
-                                <div>
-                                  <h1 class="display-4"><i class="fas fa-socks"></i></h1>
-                                </div>
-                                FILOPORO
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-                      <div class="col-md-3">
-                          <div>
-                            <div class="card mb-3 text-center text-whsm bg-black">
-                              <div class="card-body">
-                                <div>
-                                  <h1 class="display-4"><i class="fas fa-socks"></i></h1>
-                                </div>
-                                GLAMOUR
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-                      <div class="col-md-3">
-                          <div>
-                            <div class="card mb-3 text-center text-whsm bg-black">
-                              <div class="card-body">
-                                <div>
-                                  <h1 class="display-4"><i class="fas fa-socks"></i></h1>
-                                </div>
-                                OMSA
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-                      <div class="col-md-3">
-                          <div>
-                            <div class="card mb-3 text-center text-whsm bg-black">
-                              <div class="card-body">
-                                <div>
-                                  <h1 class="display-4"><i class="fas fa-socks"></i></h1>
-                                </div>
-                                (Brand)
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-                      <div class="col-md-3">
-                          <div>
-                            <div class="card mb-3 text-center text-whsm bg-black">
-                              <div class="card-body">
-                                <div>
-                                  <h1 class="display-4"><i class="fas fa-socks"></i></h1>
-                                </div>
-                                (Brand)
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+            {% block brands %}
+              
+            {% endblock brands %}
               
           <hr/>
             <section>
@@ -331,7 +240,7 @@
                 <div class="row py-4">
                     <div class="col-md-4">
                         <h5>О Компании</h5>
-                        <p>Kolgotka.kz - Интренет магазин колготок.</p>
+                        <p><a href="{% url 'home' %}" class="san">Kolgotka.kz</a> - Интренет магазин колготок.</p>
                         <p><i class="fas fa-map-marker-alt"></i> г. Алматы<br/>
                               Рынок "Юпитер"<br/>
                               Административный ряд<br/>
