@@ -37,61 +37,64 @@
         <meta property="og:description" content="Колготки Levante, в лучших традициях Итальянского стиля и качества. Купить в интернет &ndash; магазине Kolgotka.kz. Доставка. Возврат. Гарантия. Алматы, Казахстан.">
     </head>
     <style>
+    
       body {
         font-size: 1.2rem;
+      }
+      nav {
+        font-size: 1rem;
+      }
+      .navbar-brand {
+        padding-top: 0;
       }
     </style>
     <body>
         <!-- -->
-        <nav class="bg-dotted-red sticky-top text-nowrap">
-            <div class="container navbar navbar-expand-lg navbar-light">
-                <div class="san nav-item">
-                    <a class="nav-link" href="{% url 'home' %}"><img src="/static/images/logo.png" alt="Kolgotka.kz" class="logo"></a>
-                </div>
-                <div class="nav-item">
-                    <a class="nav-link" href="tel:+77079641114"><i class="fas fa-phone-square"></i> +7 707 964 1114</a>
-                </div>
-                <div class="nav-item">
-                    <a class="nav-link" href="https://wa.me/77079641114?text=I'm%20interested%20in%20your%20car%20for%20sale"><i class="fab fa-whatsapp-square"></i> Whatsapp</a>
-                </div>
-                <div class="nav-item">
-                    <a class="nav-link" href="#">О магазине</a>
-                </div>
-                <div class="nav-item">
+        <nav class="bg-dotted-red sticky-top">
+          <nav class="container navbar navbar-expand-lg">
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="/static/images/logo.png" alt="Kolgotka.kz" class="logo"></a>
+            <div class="nav-item d-lg-none">
+              <a class="nav-link" href="tel:+77079641114"><i class="fas fa-phone-square"></i></a>
+            </div>
+            <div class="nav-item d-lg-none">
+              <a class="nav-link" href="https://wa.me/77079641114?text=I'm%20interested%20in%20your%20car%20for%20sale"><i class="fab fa-whatsapp-square"></i> WhatsApp</a>
+            </div>
+            <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">О нас</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#">Доставка</a>
-                </div>
-                <div class="nav-item">
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#">Контакты</a>
-                </div>
-                <div class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
-                </div>
-
-                {% if user.is_authenticated %}
+                </li>
+              </ul>
+              {% if user.is_authenticated %}
                 <div class="nav-item">
                   <a class="nav-link" href="#"><i class="fas fa-user"></i> {{ user.username }}</a>
                 </div>
-                <div class="nav-item">
-                  <a class="nav-link" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i></a>
-                </div>
-                  
                 {% else %} 
                 <div class="nav-item">
-                  <a class="nav-link" href="{% url 'login' %}">ВХОД</a>
+                    <a class="nav-link" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Войти</a>
                 </div>
                 {% endif %}
-                
-
-                <div class="nav-item">
-                    <a class="nav-link" href="{% url 'post_new' %}">+ Post</a>
-                </div>
+              <div class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-shopping-bag"></i></a>
+              </div>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Найти" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+              </form>
             </div>
+          </nav>
         </nav>
-        <!-- -->
-
-        
         <main class="">
-<!-- 
+        <!-- 
             <section id="carousel py-1">
                 <div class="container">
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -117,7 +120,7 @@
                     </div>
                 </div>
             </section>
--->
+          -->
             <section id="intro" class="bg-dotted-red py-1">
                 <div class="container jumbotron text-center">
                     <h1 class="display-4 san">Kolgotka.kz</h1>
