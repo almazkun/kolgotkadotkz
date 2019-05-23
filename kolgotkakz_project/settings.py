@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'homepage.apps.HomepageConfig',
     'accounts.apps.AccountsConfig',
     'shop.apps.ShopConfig',
+    'cart.apps.CartConfig',
 ]
 
 MIDDLEWARE = [
@@ -135,4 +136,7 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
 MEDIA_URL = '/media/'
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'products/')
+
+CART_SESSION_ID = 'cart'
