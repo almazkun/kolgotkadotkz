@@ -96,214 +96,56 @@
     {% endfor %}
 {% endblock content %}
 
-{% block product %}
-    <section id="product-list" class="my-3">
-        <div class="container">
-            <h2 class="display-5">Купить Колготки</h2>
-            <p>Итальянские колготки</p>
-            <div class="row">
+{% block product-list %}
+<section id="" class="my-3">
+    <div class="container">
+        <h2 class="display-5">Купить Колготки</h2>
+        <p>Итальянские колготки</p>
+        <div class="row">
+            {% for product in products %}
                 <div class="col-6 col-sm-6 col-md-4 col-lg-3">
                     <div class="card ">
                         <div class="card-body">
-                            <a class="" href="#">
-                                <div class="product-image small"><img class="card-img-top" src="static/images/product-image.jpg" alt="Card image cap"></div>
+                            
+                            <div class="product-image small">
+                                <a href="{{ product.get_absolute_url }}">
+                                    <img class="card-img-top"
+                                         src="
+                                            {% if product.image %}
+                                                {{ product.image.url }} 
+                                            {% else %}
+                                                /static/images/product-image.jpg
+                                            {% endif %}
+                                            " alt="{{ product.name }}
+                                            ">
+                                </a>
+                            </div>
 
-                                <div class="product-brand small mt-1">Levante</div>
+                            <div class="product-brand small mt-1">Levante</div>
 
-                                <div class="product-name font-weight-bold">Levia 140</div>
-                                <div class="product-price">5 200 тг</div>
-                                <div class="product-size text-monospace">S M L XL XXL</div>
-                                <div class="product-color d-flex justify-content-start small text-center">
-                                    <div class="product-color-item bg-primary rounded-circle">B</div>
-                                    <div class="product-color-item bg-info rounded-circle">I</div>
-                                    <div class="product-color-item bg-danger rounded-circle">R</div>
-                                </div>
-                                <div class="product-promo small font-italic text-red">Купи 3 - получи 15% скидки!</div>
-                                <div class="btn-group mt-1">
-                                    <button class="btn bg-red text-white">O</button>
-                                    <button class="btn bg-black text-whsm">Купить</button>
-                                </div>
-                            </a>
+                            <div class="product-name font-weight-bold">
+                                <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+                            </div>
+
+                            <div class="product-price"><i class="fas fa-tenge"></i> {{ product.price }}</div>
+                            <div class="product-size text-monospace">S M L XL XXL</div>
+                            <div class="product-color d-flex justify-content-start small text-center">
+                                <div class="product-color-item bg-primary rounded-circle">B</div>
+                                <div class="product-color-item bg-info rounded-circle">I</div>
+                                <div class="product-color-item bg-danger rounded-circle">R</div>
+                            </div>
+                            <div class="product-promo small font-italic text-red">Купи 3 - получи 15% скидки!</div>
+                            <div class="btn-group mt-1">
+                                <button class="btn bg-red text-white">O</button>
+                                <button class="btn bg-black text-whsm">Купить</button>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card ">
-                        <div class="card-body">
-                            <a class="" href="#">
-                                <div class="product-image small"><img class="card-img-top" src="static/images/product-image.jpg" alt="Card image cap"></div>
-
-                                <div class="product-brand small mt-1">Levante</div>
-
-                                <div class="product-name font-weight-bold">Levia 140</div>
-                                <div class="product-price">5 200 тг</div>
-                                <div class="product-size text-monospace">S M L XL XXL</div>
-                                <div class="product-color d-flex justify-content-start small text-center">
-                                    <div class="product-color-item bg-primary rounded-circle">B</div>
-                                    <div class="product-color-item bg-info rounded-circle">I</div>
-                                    <div class="product-color-item bg-danger rounded-circle">R</div>
-                                </div>
-                                <div class="product-promo small font-italic text-red">Купи 3 - получи 15% скидки!</div>
-                                <div class="btn-group mt-1">
-                                    <button class="btn bg-red text-white">O</button>
-                                    <button class="btn bg-black text-whsm">Купить</button>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card ">
-                        <div class="card-body">
-                            <a class="" href="#">
-                                <div class="product-image small"><img class="card-img-top" src="static/images/product-image.jpg" alt="Card image cap"></div>
-
-                                <div class="product-brand small mt-1">Levante</div>
-
-                                <div class="product-name font-weight-bold">Levia 140</div>
-                                <div class="product-price">5 200 тг</div>
-                                <div class="product-size text-monospace">S M L XL XXL</div>
-                                <div class="product-color d-flex justify-content-start small text-center">
-                                    <div class="product-color-item bg-primary rounded-circle">B</div>
-                                    <div class="product-color-item bg-info rounded-circle">I</div>
-                                    <div class="product-color-item bg-danger rounded-circle">R</div>
-                                </div>
-                                <div class="product-promo small font-italic text-red">Купи 3 - получи 15% скидки!</div>
-                                <div class="btn-group mt-1">
-                                    <button class="btn bg-red text-white">O</button>
-                                    <button class="btn bg-black text-whsm">Купить</button>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card ">
-                        <div class="card-body">
-                            <a class="" href="#">
-                                <div class="product-image small"><img class="card-img-top" src="static/images/product-image.jpg" alt="Card image cap"></div>
-
-                                <div class="product-brand small mt-1">Levante</div>
-
-                                <div class="product-name font-weight-bold">Levia 140</div>
-                                <div class="product-price">5 200 тг</div>
-                                <div class="product-size text-monospace">S M L XL XXL</div>
-                                <div class="product-color d-flex justify-content-start small text-center">
-                                    <div class="product-color-item bg-primary rounded-circle">B</div>
-                                    <div class="product-color-item bg-info rounded-circle">I</div>
-                                    <div class="product-color-item bg-danger rounded-circle">R</div>
-                                </div>
-                                <div class="product-promo small font-italic text-red">Купи 3 - получи 15% скидки!</div>
-                                <div class="btn-group mt-1">
-                                    <button class="btn bg-red text-white">O</button>
-                                    <button class="btn bg-black text-whsm">Купить</button>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card ">
-                        <div class="card-body">
-                            <a class="" href="#">
-                                <div class="product-image small"><img class="card-img-top" src="static/images/product-image.jpg" alt="Card image cap"></div>
-
-                                <div class="product-brand small mt-1">Levante</div>
-
-                                <div class="product-name font-weight-bold">Levia 140</div>
-                                <div class="product-price">5 200 тг</div>
-                                <div class="product-size text-monospace">S M L XL XXL</div>
-                                <div class="product-color d-flex justify-content-start small text-center">
-                                    <div class="product-color-item bg-primary rounded-circle">B</div>
-                                    <div class="product-color-item bg-info rounded-circle">I</div>
-                                    <div class="product-color-item bg-danger rounded-circle">R</div>
-                                </div>
-                                <div class="product-promo small font-italic text-red">Купи 3 - получи 15% скидки!</div>
-                                <div class="btn-group mt-1">
-                                    <button class="btn bg-red text-white">O</button>
-                                    <button class="btn bg-black text-whsm">Купить</button>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card ">
-                        <div class="card-body">
-                            <a class="" href="#">
-                                <div class="product-image small"><img class="card-img-top" src="static/images/product-image.jpg" alt="Card image cap"></div>
-
-                                <div class="product-brand small mt-1">Levante</div>
-
-                                <div class="product-name font-weight-bold">Levia 140</div>
-                                <div class="product-price">5 200 тг</div>
-                                <div class="product-size text-monospace">S M L XL XXL</div>
-                                <div class="product-color d-flex justify-content-start small text-center">
-                                    <div class="product-color-item bg-primary rounded-circle">B</div>
-                                    <div class="product-color-item bg-info rounded-circle">I</div>
-                                    <div class="product-color-item bg-danger rounded-circle">R</div>
-                                </div>
-                                <div class="product-promo small font-italic text-red">Купи 3 - получи 15% скидки!</div>
-                                <div class="btn-group mt-1">
-                                    <button class="btn bg-red text-white">O</button>
-                                    <button class="btn bg-black text-whsm">Купить</button>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card ">
-                        <div class="card-body">
-                            <a class="" href="#">
-                                <div class="product-image small"><img class="card-img-top" src="static/images/product-image.jpg" alt="Card image cap"></div>
-
-                                <div class="product-brand small mt-1">Levante</div>
-
-                                <div class="product-name font-weight-bold">Levia 140</div>
-                                <div class="product-price">5 200 тг</div>
-                                <div class="product-size text-monospace">S M L XL XXL</div>
-                                <div class="product-color d-flex justify-content-start small text-center">
-                                    <div class="product-color-item bg-primary rounded-circle">B</div>
-                                    <div class="product-color-item bg-info rounded-circle">I</div>
-                                    <div class="product-color-item bg-danger rounded-circle">R</div>
-                                </div>
-                                <div class="product-promo small font-italic text-red">Купи 3 - получи 15% скидки!</div>
-                                <div class="btn-group mt-1">
-                                    <button class="btn bg-red text-white">O</button>
-                                    <button class="btn bg-black text-whsm">Купить</button>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card ">
-                        <div class="card-body">
-                            <a class="" href="#">
-                                <div class="product-image small"><img class="card-img-top" src="static/images/product-image.jpg" alt="Card image cap"></div>
-
-                                <div class="product-brand small mt-1">Levante</div>
-
-                                <div class="product-name font-weight-bold">Levia 140</div>
-                                <div class="product-price">5 200 тг</div>
-                                <div class="product-size text-monospace">S M L XL XXL</div>
-                                <div class="product-color d-flex justify-content-start small text-center">
-                                    <div class="product-color-item bg-primary rounded-circle">B</div>
-                                    <div class="product-color-item bg-info rounded-circle">I</div>
-                                    <div class="product-color-item bg-danger rounded-circle">R</div>
-                                </div>
-                                <div class="product-promo small font-italic text-red">Купи 3 - получи 15% скидки!</div>
-                                <div class="btn-group mt-1">
-                                    <button class="btn bg-red text-white">O</button>
-                                    <button class="btn bg-black text-whsm">Купить</button>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr/>
+            {% endfor %}            
         </div>
-    </section>
-{% endblock product %}
+        <hr/>
+    </div>
+</section>
+{% endblock product-list %}
