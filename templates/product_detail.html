@@ -20,8 +20,13 @@
 
         <div class="product-price"><i class="fas fa-tenge"></i> {{ product.price }}</div>
 
+        <form action="{% url 'cart:cart_add' produvct.id %}" method="POST">
+                {% csrf_token %}
+                {{ cart_product_form }}
+                <input type="submit" value="Добавить в Корзину" class="btn btn-primary">
+        </form>
+
         <div class="product-description"><p>{{ product.description|safe|linebreaksbr }}</p></div>
-        
     </div>
   </div>
 {% endblock content %}
