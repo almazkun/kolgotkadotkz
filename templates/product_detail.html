@@ -20,7 +20,7 @@
 
         <div class="product-price"><i class="fas fa-tenge"></i> {{ product.price }}</div>
 
-        <form action="{% url 'cart:cart_add' produvct.id %}" method="POST">
+        <form action="{% url 'cart:cart_add' product.id %}" method="POST">
                 {% csrf_token %}
                 {{ cart_product_form }}
                 <input type="submit" value="Добавить в Корзину" class="btn btn-primary">

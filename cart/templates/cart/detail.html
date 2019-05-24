@@ -52,8 +52,11 @@
                                             " alt="{{ product.name }}">
                                 </a>
                             </td>
+                            
+                            <td>{{ product.name }}</td>
+                            
                             <td>
-                                <form action="{% url'cart:cart_add' product.id %}" method="POST">
+                                <form action="{% url 'cart:cart_add' product.id %}" method="POST">
                                     {% csrf_token %}
                                     {{ item.update_quantity_form.quantity }}
                                     {{ item.update_quantity_form.update }}
