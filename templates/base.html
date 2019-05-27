@@ -13,7 +13,7 @@
         <title>Колготки из Италии | Интернет магазин | Kolgotka.kz</title>
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link href="https://fonts.googleapis.com/css?family=Marck+Script&amp;subset=cyrillic" rel="stylesheet">
 
@@ -78,18 +78,21 @@
                 <div class="nav-item">
                   <a class="nav-link" href="#"><i class="fas fa-user"></i> {{ user.username }}</a>
                 </div>
-                {% else %} 
+                <div class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i></a>
+                </div>
+              {% else %} 
                 <div class="nav-item">
                     <a class="nav-link" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Войти</a>
                 </div>
-                {% endif %}
-              <div class="nav-item">
-
-                
-                  <a class="nav-link" href="#"><i class="fas fa-shopping-bag"></i></a>
-
+              {% endif %}
+              <div class="nav-item">                
                   {% with total_items=cart|length %}
-                    
+                    {% if cart|length > 0 %}
+                      <a class="nav-link text-red" href="{% url 'cart:cart_detail' %}"><i class="fas fa-shopping-bag"></i> {{ total_items }}</a>
+                    {% else %}
+                      <a class="nav-link" href="{% url 'cart:cart_detail' %}"><i class="fas fa-shopping-bag"></i></a>
+                    {% endif %}
                   {% endwith %}
               </div>
               <form class="form-inline my-2 my-lg-0">
