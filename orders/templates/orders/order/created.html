@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-8">
+            <h3 class="page-header">
+                Спасибо за Ваш заказ!
+            </h3>
+            <p>Вы успешно оформили заказ! Наш менеджер свяжется с вами в самое ближайшее время!</p>
+            <p>Номер вашего заказа: <strong>{{ order.id }}</strong></p>
+        </div>
+    </div>
+{% endblock content %}

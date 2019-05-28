@@ -85,7 +85,7 @@
         
         <div class="card-footer text-right">
             <a href="{% url 'shop:product_list' %}" class="btn">Обратно в магазин</a>
-            <a href="" class="btn btn-danger">Подтвердить заказ</a>
+            <a href="{% url 'orders:order_create' %}" class="btn btn-danger">Подтвердить заказ</a>
         </div>
     </div>
 {% endblock content %}
