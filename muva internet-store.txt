@@ -12,7 +12,6 @@ https://academy.muva.tech/blog/developing-shopping-cart-class-shop-products-djan
 
 https://academy.muva.tech/blog/creating-shopping-cart-views-shop-products-django-2-0-python-3-6/
 
-
 https://academy.muva.tech/blog/lesson-8-developing-context-processor-current-cart-django-2-0-python-3-6/
 
 https://academy.muva.tech/blog/lesson-9-persisting-customer-orders-database-django-2-0-python-3-6/
